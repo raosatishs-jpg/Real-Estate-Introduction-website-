@@ -256,6 +256,8 @@ footer .legal{margin-top:56px;padding-top:24px;border-top:1px solid var(--hair);
 }
 @media (max-width:480px){
   body{font-size:17px}
+  .logo b{font-size:.64rem;letter-spacing:.1em;white-space:nowrap}
+  .logo i{font-size:.84rem}
   .row{grid-template-columns:1fr;gap:10px;padding:30px 0}
   .portrait::before{inset:-10px 10px 10px -10px}
 }
