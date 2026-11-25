@@ -119,6 +119,13 @@ a.card:hover .go::after{transform:translateX(4px)}
 .line{height:1px;background:var(--hair);position:relative;margin:6px 0}
 .line::after{content:"";position:absolute;left:0;top:-1px;width:36px;height:3px;background:var(--gold);border-radius:2px}
 
+/* testimonials */
+.quote{margin:0;gap:22px}
+.quote blockquote{margin:0;font:400 italic 1.2rem/1.5 var(--serif);color:var(--navy)}
+.quote figcaption{margin-top:auto;padding-top:16px;border-top:1px solid var(--hair);display:grid;gap:4px}
+.quote figcaption b{font:600 .88rem/1.2 var(--head);color:var(--navy)}
+.quote figcaption span{font-size:.84rem;color:var(--muted)}
+
 /* rows (numbered list) */
 .rows{margin-top:64px;text-align:left}
 .row{display:grid;grid-template-columns:auto 1fr;gap:28px;padding:36px 0;border-top:1px solid var(--hair)}
