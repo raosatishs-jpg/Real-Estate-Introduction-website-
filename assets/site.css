@@ -47,6 +47,7 @@ section{padding-block:clamp(80px,10vw,136px)}
 .btn.ghost{background:transparent;color:var(--navy);box-shadow:inset 0 0 0 1.5px var(--navy)}
 .btn.ghost:hover{background:var(--navy);color:#fff}
 .tlink{font:600 .95rem/1.4 var(--head);color:var(--navy);text-decoration:none;border-bottom:1.5px solid var(--gold);padding-bottom:3px;transition:color .2s}
+.cta .tlink{display:inline-flex;align-items:center;min-height:44px;padding-bottom:0;border-bottom:0;background:linear-gradient(var(--gold),var(--gold)) 0 calc(100% - 8px)/100% 1.5px no-repeat}
 .tlink:hover{color:var(--gold-ink)}
 .cta{display:flex;flex-wrap:wrap;align-items:center;gap:14px 28px;margin-top:40px}
 .c .cta{justify-content:center}
@@ -57,8 +58,12 @@ section{padding-block:clamp(80px,10vw,136px)}
 header.top{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.9);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);transition:box-shadow .25s}
 header.top.scrolled{box-shadow:0 1px 0 var(--hair)}
 header.top .wrap{display:flex;align-items:center;gap:20px;min-height:78px}
-.logo{margin-right:auto}
-.logo img{height:40px;width:auto}
+/* Brand Guidelines 4.3: text wordmark in brand sans + circular profile photo with gold border */
+.logo{margin-right:auto;display:inline-flex;align-items:center;gap:12px;text-decoration:none}
+.logo img{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:center 15%;box-shadow:0 0 0 2px var(--white),0 0 0 3.5px var(--gold)}
+.logo span{display:grid;gap:3px}
+.logo b{font:700 .8rem/1 var(--head);letter-spacing:.14em;text-transform:uppercase;color:var(--navy)}
+.logo i{font:500 italic .92rem/1 var(--serif);color:var(--gold-ink)}
 nav.main{display:none;gap:30px;font:500 .9rem/1 var(--head);color:var(--text)}
 nav.main a{text-decoration:none;position:relative;padding:8px 0}
 nav.main a::after{content:"";position:absolute;left:0;right:0;bottom:0;height:1.5px;background:var(--gold);transform:scaleX(0);transition:transform .2s}
@@ -141,7 +146,7 @@ a.card:hover .go::after{transform:translateX(4px)}
 
 /* split */
 .split{display:grid;gap:64px;align-items:center}
-.portrait{position:relative;max-width:440px;width:100%;margin:0 auto;z-index:0}
+.portrait{position:relative;max-width:400px;width:100%;margin:0 auto;z-index:0}
 .portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 18%;border-radius:var(--r);box-shadow:var(--shadow);background:var(--mist)}
 .portrait::before{content:"";position:absolute;inset:-18px 18px 18px -18px;border:1px solid var(--gold);border-radius:24px;z-index:-1}
 .avatar{width:min(280px,70vw);aspect-ratio:1;border-radius:50%;overflow:hidden;border:5px solid var(--gold);margin:0 auto;background:var(--mist)}

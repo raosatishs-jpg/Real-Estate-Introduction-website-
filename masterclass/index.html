@@ -59,10 +59,14 @@ section{padding-block:clamp(88px,11vw,144px)}
 header.top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.88);backdrop-filter:saturate(1.6) blur(14px);-webkit-backdrop-filter:saturate(1.6) blur(14px);transition:box-shadow .25s}
 header.top.scrolled{box-shadow:0 1px 0 var(--hair)}
 header.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:76px}
-.logo img{height:40px;width:auto}
+.logo{display:inline-flex;align-items:center;gap:12px;text-decoration:none}
+.logo img{width:40px;height:40px;border-radius:50%;object-fit:cover;object-position:center 15%;box-shadow:0 0 0 2px #fff,0 0 0 3.5px var(--gold)}
+.logo span{display:grid;gap:3px}
+.logo b{font:700 .8rem/1 var(--head);letter-spacing:.14em;text-transform:uppercase;color:var(--navy)}
+.logo i{font:500 italic .92rem/1 var(--serif);color:var(--gold-ink)}
 nav.links{display:none;gap:34px;font:500 .9rem/1 var(--head);color:var(--text)}
-nav.links a{text-decoration:none;position:relative}
-nav.links a::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .2s}
+nav.links a{text-decoration:none;position:relative;padding:14px 0}
+nav.links a::after{content:"";position:absolute;left:0;right:0;bottom:8px;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .2s}
 nav.links a:hover::after{transform:scaleX(1)}
 
 /* hero */
@@ -268,7 +272,7 @@ dialog .btn{width:100%;justify-content:center;margin-top:6px}
 
 <header class="top" id="hdr">
   <div class="wrap">
-    <a class="logo" href="/"><img src="https://asksatishrao.com/assets/images/logo/satish-rao-horizontal-premium-brand/satish-rao-horizontal-premium-logo.png" alt="Satish Rao · Authority Before Contact" width="180" height="40"></a>
+    <a class="logo" href="/" aria-label="Authority Before Contact, Satish Rao, home"><img src="https://asksatishrao.com/assets/images/satish-rao-photos/satish-rao-home-author-preview.webp" alt="" width="40" height="40"><span><b>Authority Before Contact</b><i>Satish Rao</i></span></a>
     <nav class="links" aria-label="Sections"><a href="#shifts">The Three Shifts</a><a href="#workbook">Workbook</a><a href="#host">Your Host</a><a href="#faq">Questions</a></nav>
     <button class="btn sm" data-book>Reserve My Free Seat</button>
   </div>
