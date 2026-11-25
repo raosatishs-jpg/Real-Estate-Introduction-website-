@@ -1,0 +1,83 @@
+/* OPTION B: 1% Club-inspired UI/UX layered on top of site.css.
+   Borrowed devices: fact strip on top, tinted grid-paper hero, centred headlines with italic serif accent words,
+   pill eyebrows, dark gradient buttons with the price inside, flat bordered cards, stage-style rows, a dark
+   testimonial band, tinted FAQ rows, a dark closing band and a sticky price bar on every page.
+   Kept within the brand: navy/gold/white only, no red, no emojis, no false scarcity. */
+:root{--tint:#F7F0E0;--tint-2:#FBF8F1;--grid:#F0EEE8;--faq:#EEF2F8;--dark:#001833}
+body{padding-bottom:84px}
+
+/* top fact strip */
+.strip{background:var(--navy);color:#fff;font:600 .74rem/1.2 var(--head);letter-spacing:.06em;display:flex;flex-wrap:wrap;justify-content:center;gap:6px 22px;padding:10px 16px;text-align:center}
+.strip span{display:inline-flex;align-items:center;gap:10px}
+.strip span+span::before{content:"";width:4px;height:4px;border-radius:50%;background:var(--gold)}
+
+/* grid-paper backgrounds */
+section{background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:56px 56px}
+.mist{background-color:var(--tint-2)}
+
+/* headings: lighter weight, centred, italic serif accent (replaces the underline) */
+.h1,.h2{font-weight:600;letter-spacing:-.03em}
+.mark{text-decoration:none;font-family:var(--serif);font-style:italic;font-weight:500;letter-spacing:-.01em;color:var(--navy)}
+.eyebrow{display:inline-block;background:var(--tint);color:var(--gold-ink);border-radius:6px;padding:8px 12px;letter-spacing:.16em;font-size:.68rem}
+
+/* hero: tinted, centred, photo framed below on all widths */
+.hero{background-color:var(--tint);background-image:linear-gradient(rgba(205,175,99,.18) 1px,transparent 1px),linear-gradient(90deg,rgba(205,175,99,.18) 1px,transparent 1px);background-size:48px 48px}
+.hero .grid{grid-template-columns:1fr!important;min-height:0!important;justify-items:center;text-align:center}
+.hero .copy{padding:clamp(48px,7vw,88px) 0 36px!important;max-width:860px}
+.hero .lede,.hero .small{margin-left:auto;margin-right:auto}
+.hero .cta{justify-content:center}
+.hero .media{order:2!important;width:min(460px,100%);aspect-ratio:4/5;min-height:0!important;margin:0 auto clamp(48px,7vw,80px)!important;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,33,71,.5);border:6px solid #fff}
+.phero{background-color:var(--tint);text-align:center}
+.phero .slim,.phero .prose-w{margin-left:auto;margin-right:auto}
+.phero .lede{margin-left:auto;margin-right:auto}
+.phero .crumb{justify-content:center}
+.phero .cta{justify-content:center}
+
+/* buttons: dark gradient, squarer, uppercase, price chip */
+.btn{border-radius:8px;background:linear-gradient(170deg,var(--dark) 37%,#1C3A63 61%,var(--dark) 84%);text-transform:uppercase;letter-spacing:.04em;font-weight:700}
+.btn .price{display:inline-flex;align-items:baseline;gap:8px;padding-left:14px;margin-left:2px;border-left:1px solid rgba(255,255,255,.25);text-transform:none;letter-spacing:0}
+.btn .price b{color:var(--gold);font-weight:800}
+.btn .price s{color:#9AA7BA;font-weight:500;font-size:.85em}
+.btn.sm .price{display:none}
+
+/* cards: flat with a border, like the 1% Club stage cards */
+.card{box-shadow:none;border:1px solid #E4E2DC;border-radius:16px}
+a.card:hover{box-shadow:0 18px 36px -24px rgba(0,33,71,.35);border-color:var(--gold)}
+.row{border:1px solid #E4E2DC!important;border-radius:16px;padding:26px 28px;margin-bottom:14px;background:#fff}
+.row .num{font-size:2.4rem;font-weight:500}
+
+/* dark testimonial band */
+.proof{background:var(--navy)!important;background-image:none!important}
+.proof .h2{color:#fff}
+.proof .eyebrow{background:rgba(255,255,255,.08);color:var(--gold)}
+.proof .card{background:#0B2D57;border-color:rgba(255,255,255,.12)}
+.proof .quote blockquote{color:#fff}
+.proof .quote figcaption{border-color:rgba(255,255,255,.14)}
+.proof .quote figcaption b{color:var(--gold)}
+.proof .quote figcaption span{color:#B8C3D3}
+
+/* FAQ rows */
+details{background:var(--faq);border:0!important;border-radius:12px;padding:0 20px;margin-bottom:10px}
+
+/* closing band: dark, like "Still not convinced?" */
+.closing{background:var(--navy)!important;background-image:none!important;border:0}
+.closing .eyebrow{background:rgba(255,255,255,.08);color:var(--gold)}
+.closing .pull{color:#fff}
+.closing .lede{color:#C9D2DE}
+.closing .aside{color:#B8C3D3}
+.closing .btn{background:#fff;color:var(--navy)}
+.closing .btn .price{border-color:rgba(0,33,71,.2)}
+.closing .btn .price s{color:#7A8494}
+.closing .btn .price b{color:var(--gold-ink)}
+
+/* sticky price bar on every page */
+.pbar{position:fixed;left:0;right:0;bottom:0;z-index:45;background:var(--navy);color:#fff;padding:12px max(16px,env(safe-area-inset-right,0px)) calc(12px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.pbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:0}
+.pbar .p{display:flex;align-items:baseline;flex-wrap:wrap;gap:4px 10px}
+.pbar .p b{font:800 1.3rem/1 var(--head);color:var(--gold)}
+.pbar .p s{color:#8E9BB0;font:500 .95rem var(--head)}
+.pbar .p small{flex-basis:100%;color:#B8C3D3;font-size:.72rem}
+.pbar a{flex:none;text-decoration:none;border-radius:8px;padding:14px 20px;font:800 .86rem/1 var(--head);letter-spacing:.04em;text-transform:uppercase;color:var(--navy);background:linear-gradient(180deg,#F3E3BD,var(--gold))}
+
+/* option switcher in the preview strip */
+.preview a{color:var(--navy);font-weight:700}
