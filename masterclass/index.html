@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noindex, nofollow">
-<title>The Authority Shift · Free Live Masterclass · Satish Rao</title>
+<title>The Authority Shift · Free Live Masterclass · Satish Rao</title>
 <meta name="description" content="A free, live 90-minute masterclass for experienced advisors serving HNI families. From invisible expert to recognised authority.">
 <meta property="og:title" content="The Authority Shift · Free Live Masterclass">
 <meta property="og:description" content="From invisible expert to recognised authority, in ninety minutes. Free. Standing Gap Score Workbook included.">
@@ -28,7 +28,7 @@ html{scroll-behavior:smooth;scroll-padding-top:84px}
 body{margin:0;background:var(--white);color:var(--text);font:18px/1.7 var(--body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 img{max-width:100%;display:block}
 h1,h2,h3{margin:0;font-family:var(--head);color:var(--navy);text-wrap:balance}
-p{margin:0}
+p{margin:0;text-wrap:pretty}
 a{color:inherit}
 .wrap{max-width:1180px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
 .slim{max-width:860px}
@@ -79,8 +79,8 @@ nav.links a:hover::after{transform:scaleX(1)}
 .meta span{display:inline-flex;align-items:center;gap:10px}
 .meta span::before{content:"";width:6px;height:6px;border-radius:50%;background:var(--gold)}
 .meta s{color:var(--muted);font-weight:400}
-.hero .media{position:relative;min-height:440px;background:var(--mist)}
-.hero .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 20%}
+.hero .media{position:relative;aspect-ratio:2/3;width:min(420px,100%);justify-self:center;align-self:center;margin:clamp(32px,5vw,56px) auto;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,33,71,.45);background:var(--mist)}
+.hero .media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top}
 .hero .media::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,255,255,.0) 70%,rgba(255,255,255,.0))}
 .badge{position:absolute;left:24px;bottom:24px;z-index:1;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-radius:14px;padding:16px 20px;box-shadow:var(--shadow);display:flex;gap:14px;align-items:center}
 .badge .live{font:600 .62rem/1 var(--head);letter-spacing:.2em;color:var(--navy);display:flex;align-items:center;gap:7px}
@@ -158,7 +158,7 @@ nav.links a:hover::after{transform:scaleX(1)}
 /* host */
 .host{display:grid;gap:64px;align-items:center}
 .portrait{position:relative;max-width:460px;width:100%;margin:0 auto}
-.portrait img{width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 18%;border-radius:20px;box-shadow:var(--shadow);background:var(--mist)}
+.portrait img{width:100%;aspect-ratio:2/3;object-fit:cover;object-position:center top;border-radius:20px;box-shadow:var(--shadow);background:var(--mist)}
 .portrait::before{content:"";position:absolute;inset:-18px 18px 18px -18px;border:1px solid var(--gold);border-radius:24px;z-index:-1}
 .portrait{z-index:0}
 .host .name{font:500 clamp(2.4rem,4.6vw,3.3rem)/1.05 var(--serif);color:var(--navy);letter-spacing:-.01em}
@@ -241,14 +241,14 @@ dialog .btn{width:100%;justify-content:center;margin-top:6px}
   nav.links{display:flex}
   .hero .grid{grid-template-columns:1fr 1fr;min-height:min(760px,calc(100vh - 76px))}
   .hero .copy{padding-right:64px;align-self:center}
-  .hero .media{min-height:auto;margin-right:calc(-1 * max(24px,(100vw - 1180px)/2 + 24px))}
+
   .wb{grid-template-columns:.85fr 1.15fr;gap:96px}
   .host{grid-template-columns:.9fr 1.1fr;gap:110px}
   .mbar{display:none}
   footer{padding-bottom:44px}
 }
 @media (max-width:999px){
-  .hero .media{order:-1;aspect-ratio:4/3.4;min-height:0;margin-inline:calc(-1 * max(24px,env(safe-area-inset-left,0px)))}
+  .hero .media{order:2;width:min(340px,78vw);margin:0 auto 48px}
   .badge{left:16px;bottom:16px;padding:12px 16px}
   header.top .btn{display:none}
 }
@@ -274,7 +274,7 @@ dialog .btn{width:100%;justify-content:center;margin-top:6px}
 
 <header class="top" id="hdr">
   <div class="wrap">
-    <a class="logo" href="/" aria-label="Authority Before Contact, Satish Rao, home"><img src="/assets/img/satish-avatar-96.webp" alt="" width="40" height="40"><span><b>Authority Before Contact</b><i>Satish Rao</i></span></a>
+    <a class="logo" href="/" aria-label="Authority Before Contact, Satish Rao, home"><img src="/assets/img/satish-avatar-96.webp" alt="" width="40" height="40"><span><b>Authority Before Contact</b><i>Satish Rao</i></span></a>
     <nav class="links" aria-label="Sections"><a href="#shifts">The Three Shifts</a><a href="#workbook">Workbook</a><a href="#host">Your Host</a><a href="#faq">Questions</a></nav>
     <button class="btn sm" data-book>Reserve My Free Seat</button>
   </div>
@@ -284,18 +284,18 @@ dialog .btn{width:100%;justify-content:center;margin-top:6px}
 <section class="hero">
   <div class="wrap grid">
     <div class="copy">
-      <span class="eyebrow">The Authority Shift · Free Live Masterclass</span>
-      <h1>From Invisible Expert to <span class="mark">Recognised Authority</span>, in Ninety Minutes.</h1>
-      <p class="lede">Learn why HNI families decide before you speak, and how to become the advisor they choose.</p>
-      <div class="meta"><span>Live on Zoom</span><span>90 minutes</span><span>Free <s>₹4,997</s></span></div>
+      <span class="eyebrow">The Authority Shift · Free Live Masterclass</span>
+      <h1>From Invisible Expert to <span class="mark">Recognised Authority</span>, in Ninety Minutes.</h1>
+      <p class="lede">Learn why HNI families decide before you speak, and how to become the advisor they choose.</p>
+      <div class="meta"><span>Live on Zoom</span><span>90 minutes</span><span>Free <s>₹4,997</s></span></div>
       <div class="cta">
         <button class="btn" data-book>Reserve My Free Seat <span class="arr"><svg><use href="#i-arrow"/></svg></span></button>
-        <span class="aside">Includes The Standing Gap Score Workbook</span>
+        <span class="aside">Includes The Standing Gap Score Workbook</span>
       </div>
     </div>
     <div class="media">
       <img src="/assets/img/satish-chair-1200.webp" alt="Satish Rao" width="1200" height="1800">
-      <div class="badge"><span class="live">LIVE</span><span class="sep"></span><div><b>Satish Rao</b><small>Author, The Trusted Advisor</small></div></div>
+      <div class="badge"><span class="live">LIVE</span><span class="sep"></span><div><b>Satish Rao</b><small>Author, The Trusted Advisor</small></div></div>
     </div>
   </div>
 </section>
@@ -312,18 +312,18 @@ dialog .btn{width:100%;justify-content:center;margin-top:6px}
       <div class="pc rv"><div class="role">Mutual Fund Advisor</div><p class="now"><span class="lbl">Now</span>Defending expense ratios in every client meeting.</p><div class="rule"></div><p class="after"><span class="lbl">After</span>Clients trust the frame before the figures.</p></div>
       <div class="pc rv"><div class="role">Insurance Advisor</div><p class="now"><span class="lbl">Now</span>Chasing a third follow-up that never comes back.</p><div class="rule"></div><p class="after"><span class="lbl">After</span>You are the one being waited for.</p></div>
     </div>
-    <p class="belief rv">The gap is not your skill. Authority is decided before you speak.</p>
+    <p class="belief rv">The gap is not your skill. Authority is decided before you speak.</p>
   </div>
 </section>
 
 <!-- THREE SHIFTS -->
 <section id="shifts">
   <div class="wrap slim">
-    <div class="c"><span class="eyebrow">What You Will Learn</span><h2 class="h2 rv">Three Shifts. Ninety Minutes. <span class="mark">One Gap Closed.</span></h2></div>
+    <div class="c"><span class="eyebrow">What You Will Learn</span><h2 class="h2 rv">Three Shifts. Ninety Minutes. <span class="mark">One Gap Closed.</span></h2></div>
     <div class="shifts">
-      <div class="shift rv"><div class="num">01</div><div><h3>The Decision Is Made Before You Speak.</h3><p>What shapes a prospect's verdict before the meeting, and how to win it.</p><p class="the"><b>The shift</b>It was never about the meeting.</p></div></div>
-      <div class="shift rv"><div class="num">02</div><div><h3>Experience Gets Compared on Price. Standing Does Not.</h3><p>The one thing that ends a price negotiation, and how it is built.</p><p class="the"><b>The shift</b>Create unique standing and you are no longer compared.</p></div></div>
-      <div class="shift rv"><div class="num">03</div><div><h3>The Conversation That Ends the Chase.</h3><p>The structure that lets the client name the decision. No pressure, no scripts.</p><p class="the"><b>The shift</b>When you lead like an advisor, the client names the decision.</p></div></div>
+      <div class="shift rv"><div class="num">01</div><div><h3>Shift One · Attract</h3><p>Why experience gets compared on price, and how to become the only choice.</p></div></div>
+      <div class="shift rv"><div class="num">02</div><div><h3>Shift Two · Trust</h3><p>Why good meetings still go cold, and how to show up as the advisor you've become.</p></div></div>
+      <div class="shift rv"><div class="num">03</div><div><h3>Shift Three · Convert</h3><p>The conversation that ends the chase. Most advisors never learn this one.</p></div></div>
     </div>
     <div class="cta c" style="justify-content:center"><button class="btn" data-book>Reserve My Free Seat <span class="arr"><svg><use href="#i-arrow"/></svg></span></button></div>
   </div>
@@ -333,7 +333,7 @@ dialog .btn{width:100%;justify-content:center;margin-top:6px}
 <section class="mist">
   <div class="wrap c">
     <span class="eyebrow">A Precise Diagnosis</span>
-    <h2 class="h2 rv">Know Exactly Where Your Practice Is <span class="mark">Breaking Down.</span></h2>
+    <h2 class="h2 rv">Know Exactly Where Your Practice Is <span class="mark">Breaking Down.</span></h2>
     <div class="diag rv">
       <div class="dg"><span class="k">Stage One</span><h3>Reach</h3><p>Can the right prospects find you?</p></div>
       <div class="dg"><span class="k">Stage Two</span><h3>Interest</h3><p>Do they want to sit with you once they do?</p></div>
@@ -346,10 +346,10 @@ dialog .btn{width:100%;justify-content:center;margin-top:6px}
 <!-- WORKBOOK -->
 <section id="workbook">
   <div class="wrap wb">
-    <div class="stage rv"><div class="book" aria-hidden="true"><small>Free with your seat</small><div><b>The Standing Gap Score</b><em>Workbook</em></div><span class="by">Satish Rao</span></div></div>
+    <div class="stage rv"><div class="book" aria-hidden="true"><small>Free with your seat</small><div><b>The Standing Gap Score</b><em>Workbook</em></div><span class="by">Satish Rao</span></div></div>
     <div class="rv">
       <span class="eyebrow">Included With Your Seat</span>
-      <h2 class="h2">The Standing Gap Score <span class="mark">Workbook</span></h2>
+      <h2 class="h2">The Standing Gap Score <span class="mark">Workbook</span></h2>
       <div class="value"><s>₹2,997</s><b>Free for registrants</b></div>
       <ul class="ticks">
         <li><span class="t"><svg><use href="#i-check"/></svg></span>25 diagnostic questions across five dimensions</li>
@@ -366,11 +366,11 @@ dialog .btn{width:100%;justify-content:center;margin-top:6px}
 <section class="mist">
   <div class="wrap c">
     <span class="eyebrow">The Body of Work Behind It</span>
-    <h2 class="h2 rv">The Authority Engine</h2>
+    <h2 class="h2 rv">The Authority Engine</h2>
     <div class="engine">
-      <div class="gear rv"><span class="step">GEAR 1</span><div class="verb">Attract<i>.</i></div><div class="name">The Bridge</div><div class="src">from Build the Bridge</div></div>
-      <div class="gear rv"><span class="step">GEAR 2</span><div class="verb">Trust<i>.</i></div><div class="name">The Trusted Advisor Method</div><div class="src">from The Trusted Advisor</div></div>
-      <div class="gear rv"><span class="step">GEAR 3</span><div class="verb">Convert<i>.</i></div><div class="name">The Decision Architecture</div><div class="src">the conversion gear</div></div>
+      <div class="gear rv"><span class="step">GEAR 1</span><div class="verb">Attract<i>.</i></div><div class="name">The Bridge</div><div class="src">from Build the Bridge</div></div>
+      <div class="gear rv"><span class="step">GEAR 2</span><div class="verb">Trust<i>.</i></div><div class="name">The Trusted Advisor Method</div><div class="src">from The Trusted Advisor</div></div>
+      <div class="gear rv"><span class="step">GEAR 3</span><div class="verb">Convert<i>.</i></div><div class="name">The Decision Architecture</div><div class="src">the conversion gear</div></div>
     </div>
   </div>
 </section>
@@ -379,7 +379,7 @@ dialog .btn{width:100%;justify-content:center;margin-top:6px}
 <section>
   <div class="wrap c">
     <span class="eyebrow">Claim Your Free Seat</span>
-    <h2 class="h2 rv">Three Steps. <span class="mark">Sixty Seconds.</span></h2>
+    <h2 class="h2 rv">Three Steps. <span class="mark">Sixty Seconds.</span></h2>
     <div class="steps">
       <div class="st rv"><div class="n">1</div><h3>Reserve your seat</h3><p>Name, WhatsApp number and email.</p></div>
       <div class="st rv"><div class="n">2</div><h3>Receive your workbook</h3><p>Confirmation and workbook by email, immediately.</p></div>
@@ -395,12 +395,12 @@ dialog .btn{width:100%;justify-content:center;margin-top:6px}
     <div class="portrait rv"><img src="/assets/img/satish-leaning-1200.webp" alt="Satish Rao" width="1200" height="1800" loading="lazy"></div>
     <div class="rv">
       <span class="eyebrow">Your Host</span>
-      <div class="name">Satish Rao</div>
+      <div class="name">Satish Rao</div>
       <div class="role">Authority Marketing Strategist for Solopreneurs</div>
-      <p class="bio">36 years in the Indian marketing and sales landscape, and 7 years developing the Authority Before Contact practice with experienced advisors.</p>
+      <p class="bio">36 years in the Indian marketing and sales landscape, and 7 years developing the Authority Before Contact practice with experienced advisors.</p>
       <div class="covers">
-        <img src="https://asksatishrao.com/assets/images/book-covers/the-trusted-advisor-by-satish-rao-front-page.jpeg" alt="The Trusted Advisor by Satish Rao" loading="lazy">
-        <img src="https://asksatishrao.com/assets/images/book-covers/the-bridge-by-satish-rao-front-page.png" alt="Build the Bridge by Satish Rao" loading="lazy">
+        <img src="/assets/img/cover-trusted-advisor.webp" alt="The Trusted Advisor by Satish Rao" loading="lazy">
+        <img src="/assets/img/cover-build-the-bridge.webp" alt="Build the Bridge by Satish Rao" loading="lazy">
       </div>
     </div>
   </div>
@@ -429,7 +429,7 @@ dialog .btn{width:100%;justify-content:center;margin-top:6px}
       <details><summary>Do I need to have read the books?</summary><p>No. The session stands on its own. Readers will see how to act on the book this week.</p></details>
       <details><summary>How do I get the link?</summary><p>Your confirmation and workbook arrive by email. Satish shares the session date and link on WhatsApp.</p></details>
       <details><summary>Is there a recording?</summary><p>After each live cycle a recording is available. The live seat is free. The recording is not.</p></details>
-      <details><summary>Is this about AI or tools?</summary><p>No. It is about how you are seen before you speak.</p></details>
+      <details><summary>Is this about AI or tools?</summary><p>This is about getting the basics right first. With that clarity, AI and tools become powerful. Without the right knowledge, the tools are useless.</p></details>
     </div>
   </div>
 </section>
@@ -437,24 +437,24 @@ dialog .btn{width:100%;justify-content:center;margin-top:6px}
 <!-- CLOSING -->
 <section class="closing c">
   <div class="wrap">
-    <blockquote class="rv">“Authority is decided before you speak. This session is where you decide yours.”</blockquote>
-    <cite>Satish Rao</cite>
+    <blockquote class="rv">“Authority is decided before you speak. This session is where you decide yours.”</blockquote>
+    <cite>Satish Rao</cite>
     <div class="cta"><button class="btn" data-book>Reserve My Free Seat <span class="arr"><svg><use href="#i-arrow"/></svg></span></button></div>
-    <div class="meta" style="margin-top:28px"><span>Live on Zoom</span><span>90 minutes</span><span>Free <s>₹4,997</s></span></div>
+    <div class="meta" style="margin-top:28px"><span>Live on Zoom</span><span>90 minutes</span><span>Free <s>₹4,997</s></span></div>
   </div>
 </section>
 
 <footer><div class="wrap">
-  <p>Built on 36 years in the Indian marketing and sales landscape, helping experienced advisors build positioning, trust, and predictable income.</p>
+  <p>Built on 36 years in the Indian marketing and sales landscape, helping experienced advisors build positioning, trust, and predictable income.</p>
   <p>Educational content only. Not investment, insurance or legal advice. No income result is promised.</p>
-  <p>© 2026 Satish Rao · Authority Before Contact · <a href="https://asksatishrao.com/privacy-policy/">Privacy</a> · <a href="https://asksatishrao.com/terms/">Terms</a> · satish@asksatishrao.com</p>
+  <p>© 2026 Satish Rao · Authority Before Contact · <a href="https://asksatishrao.com/privacy-policy/">Privacy</a> · <a href="https://asksatishrao.com/terms/">Terms</a> · satish@asksatishrao.com</p>
 </div></footer>
 
-<div class="mbar" id="mbar"><div>The Authority Shift<small>Free · 90 minutes · Live</small></div><button class="btn" data-book>Reserve Seat</button></div>
+<div class="mbar" id="mbar"><div>The Authority Shift<small>Free · 90 minutes · Live</small></div><button class="btn" data-book>Reserve Seat</button></div>
 
 <dialog id="dlg" aria-labelledby="dlg-t">
   <button class="x" type="button" aria-label="Close" id="dlg-x">×</button>
-  <div class="dh"><span class="eyebrow">The Authority Shift · Free</span><h3 id="dlg-t">Reserve Your Seat</h3><p>Your workbook arrives by email on registration.</p></div>
+  <div class="dh"><span class="eyebrow">The Authority Shift · Free</span><h3 id="dlg-t">Reserve Your Seat</h3><p>Your workbook arrives by email on registration.</p></div>
   <form id="reg-form" novalidate>
     <label for="mc_name">Full name<input type="text" id="mc_name" name="name" autocomplete="name" required></label>
     <label for="mc_whatsapp">WhatsApp number<input type="tel" id="mc_whatsapp" name="whatsapp" autocomplete="tel" placeholder="+91 98XXX XXXXX" required></label>
@@ -470,7 +470,7 @@ dialog .btn{width:100%;justify-content:center;margin-top:6px}
     <div class="err" id="reg-err" hidden></div>
     <button class="btn" type="submit">Reserve My Free Seat <span class="arr"><svg><use href="#i-arrow"/></svg></span></button>
   </form>
-  <div class="ok" id="reg-ok" hidden><h3>Your Seat Is Reserved.</h3><p id="ok-msg">Your confirmation and The Standing Gap Score Workbook are on their way to your inbox.</p></div>
+  <div class="ok" id="reg-ok" hidden><h3>Your Seat Is Reserved.</h3><p id="ok-msg">Your confirmation and The Standing Gap Score Workbook are on their way to your inbox.</p></div>
 </dialog>
 
 <script>

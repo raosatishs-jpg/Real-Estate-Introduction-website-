@@ -15,8 +15,9 @@ html{scroll-behavior:smooth;scroll-padding-top:90px}
 body{margin:0;background:var(--white);color:var(--text);font:18px/1.7 var(--body);-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
 img{max-width:100%;display:block}
 h1,h2,h3,h4{margin:0;font-family:var(--head);color:var(--navy);text-wrap:balance}
-p{margin:0}
+p{margin:0;text-wrap:pretty}
 a{color:inherit}
+.pull,.lede,.belief,blockquote{text-wrap:balance}
 .wrap{max-width:1180px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
 .slim{max-width:860px}
 .prose-w{max-width:760px}
@@ -232,6 +233,15 @@ footer .tag{font:400 italic 1.1rem/1.4 var(--serif);color:var(--navy);margin-top
 footer .legal{margin-top:56px;padding-top:24px;border-top:1px solid var(--hair);display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;font-size:.8rem;color:var(--muted)}
 .preview{background:var(--mist);color:var(--muted);font:500 .74rem/1.4 var(--head);text-align:center;padding:7px 14px;letter-spacing:.06em;border-bottom:1px solid var(--hair)}
 
+/* PHOTOS: always shown at their natural 2:3 proportion (no zoomed-in face crops), framed like a portrait print */
+.hero .media{aspect-ratio:2/3;min-height:0!important;width:min(420px,100%);justify-self:center;align-self:center;margin:clamp(32px,5vw,56px) auto!important;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -30px rgba(0,33,71,.45)}
+.hero .media img{object-position:center top}
+.portrait img{aspect-ratio:2/3;object-position:center top}
+.portrait{max-width:380px}
+@media (max-width:999px){.hero .media{order:2!important;width:min(340px,78vw);margin:0 auto 48px!important}}
+/* BOOK COVERS: identical 15.5 x 23 cm proportion everywhere */
+.cover,.cover-sm,.covers img,a.card img.cover-sm{aspect-ratio:155/230;object-fit:cover;height:auto}
+
 /* reveal (content visible by default; only below-the-fold elements animate in) */
 .rv{transition:opacity .8s ease,transform .8s ease}
 .js .rv.pre{opacity:0;transform:translateY(18px)}
@@ -254,12 +264,10 @@ footer .legal{margin-top:56px;padding-top:24px;border-top:1px solid var(--hair);
   .grid4{grid-template-columns:repeat(4,1fr)}
   .hero .grid{grid-template-columns:1fr 1fr;min-height:min(740px,calc(100vh - 78px))}
   .hero .copy{padding-right:64px;align-self:center}
-  .hero .media{min-height:auto;margin-right:calc(-1 * max(24px,(100vw - 1180px)/2 + 24px))}
   .split{grid-template-columns:.9fr 1.1fr;gap:110px}
   .split.rev>:first-child{order:2}
 }
 @media (max-width:999px){
-  .hero .media{order:-1;aspect-ratio:4/3.3;min-height:0;margin-inline:calc(-1 * max(24px,env(safe-area-inset-left,0px)))}
   .badge{left:16px;bottom:16px}
 }
 @media (max-width:480px){
