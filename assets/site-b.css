@@ -81,5 +81,7 @@ details{background:var(--faq);border:0!important;border-radius:12px;padding:0 20
 .pbar .p small{flex-basis:100%;color:#B8C3D3;font-size:.72rem}
 .pbar a{flex:none;text-decoration:none;border-radius:8px;padding:14px 20px;font:800 .86rem/1 var(--head);letter-spacing:.04em;text-transform:uppercase;color:var(--navy);background:linear-gradient(180deg,#F3E3BD,var(--gold))}
 
+@media (max-width:480px){.strip span:nth-child(2){display:none}}
+
 /* option switcher in the preview strip */
 .preview a{color:var(--navy);font-weight:700}
